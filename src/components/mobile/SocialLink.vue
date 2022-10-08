@@ -40,7 +40,7 @@ export default class SocialLink extends Vue {
 }
 
 .social-link {
-  color: white;
+  color: #E0D1CA;
   font-size: 1rem;
   margin-left: 3%;
 }
