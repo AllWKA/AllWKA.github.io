@@ -30,9 +30,12 @@
     <div class="tech-stack-xs">
       <div style="height: 100%; margin-top: 3%; padding-left: 1.5%; padding-right: 1.5%">
         <div style="display:flex; justify-content: flex-start; height: 7%">
-          <span class="tech-stack-label-active" @click="setActiveTab(0)">TechStack.js</span>
+          <span
+              :class="[activeTab === 0 ? 'tech-stack-label-active' : 'tech-stack-label-idle']"
+              @click="setActiveTab(0)">TechStack.js</span>
 
-          <span class="tech-stack-label-idle" @click="setActiveTab(1)">WorkedWith.js</span>
+          <span :class="[activeTab === 1 ? 'tech-stack-label-active' : 'tech-stack-label-idle']"
+                @click="setActiveTab(1)">WorkedWith.js</span>
         </div>
 
         <div class="tech-stack-list">
@@ -65,13 +68,14 @@
 import {Component, Vue} from "vue-property-decorator";
 import SocialLink from "@/components/mobile/SocialLink.vue";
 import TechStack from "@/components/mobile/TechStack.vue";
+import {TechStack as TechStackType} from "../Types";
 
 @Component({
   components: {TechStack, SocialLink}
 })
 export default class Home extends Vue {
 
-  techStackList: Array<TechStack> = [
+  techStackList: Array<TechStackType> = [
     {iconSrc: "JavaScript.svg", alt: "javascript_icon", tech: "JavaScript", time: "3 years"},
     {iconSrc: "Typescript.svg", alt: "typescript_icon", tech: "TypeScript", time: "3 years"},
     {iconSrc: "HTML5_2.png", alt: "html5_icon", tech: "HTML5", time: "3 years"},
@@ -80,7 +84,7 @@ export default class Home extends Vue {
     {iconSrc: "VueJS.svg", alt: "vuejs_icon", tech: "VueJs", time: "3 years"}
   ]
 
-  workedWithList: Array<TechStack> = [
+  workedWithList: Array<TechStackType> = [
     {iconSrc: "ElectronJS.svg", alt: "electronjs_icon", tech: "ElectronJS"},
     {iconSrc: "Mocha.png", alt: "mocha_icon", tech: "Mocha"},
     {iconSrc: "Ionic.svg", alt: "ionic_icon", tech: "Ionic"},
@@ -175,6 +179,7 @@ export default class Home extends Vue {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 0 10px 10px 10px;
 }
 
 .tech-stack-label-active {
@@ -182,6 +187,7 @@ export default class Home extends Vue {
   background-color: #332F2E;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 5px 5px 0 0;
 }
 
 .tech-stack-label-idle {
@@ -189,5 +195,6 @@ export default class Home extends Vue {
   background-color: #151313;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 5px 5px 0 0;
 }
 </style>

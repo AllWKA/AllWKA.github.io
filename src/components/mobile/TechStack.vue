@@ -39,14 +39,18 @@ export default class TechStack extends Vue {
 .tech-stack-container {
   display: flex;
   width: 100%;
-  min-height: 35px;
+  min-height: 30px;
   align-items: center;
   justify-content: flex-start;
   margin-top: 1%;
 }
 
+.tech-stack-container span {
+  font-size: 0.5rem;
+}
+
 .tech-stack-img-container {
-  width: 25px;
+  width: 20px;
   margin-right: 7px;
 }
 
@@ -57,9 +61,11 @@ export default class TechStack extends Vue {
 .tech-stack-const {
   margin-right: 3%;
   width: 49px;
+  color: orange;
 }
 
 .tech-stack-desc {
   width: 250px;
+  color: #42b242;
 }
 </style>

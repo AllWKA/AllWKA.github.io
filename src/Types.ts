@@ -1,10 +1,10 @@
-interface TechStack {
+export interface TechStack {
 
     iconSrc: string
 
     alt: string
 
-    time: string
+    time?: string
 
     tech: string
 }
