@@ -28,8 +28,8 @@
     </div>
 
     <div class="tech-stack-xs">
-      <div style="height: 100%; margin-top: 3%; padding-left: 1.5%; padding-right: 1.5%">
-        <div style="display:flex; justify-content: flex-start; height: 7%">
+      <div style="width: 90%; height: 85%; display: flex; flex-direction: column">
+        <div style="display:flex; height: 7%; width: 100%">
           <span
               :class="[activeTab === 0 ? 'tech-stack-label-active' : 'tech-stack-label-idle']"
               @click="setActiveTab(0)">TechStack.js</span>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="tech-stack-list">
-          <div v-if="activeTab===0">
+          <div v-if="activeTab === 0" style="width: 100%; height: 100%">
             <TechStack v-for="(techStack, i) in techStackList" :key="techStack.iconSrc"
                        :line="i + 1"
                        :tech="techStack.tech"
@@ -49,7 +49,7 @@
             />
           </div>
 
-          <div v-if="activeTab===1">
+          <div v-if="activeTab === 1" style="width: 100%;height: 100%">
             <TechStack v-for="(techStack, i) in workedWithList" :key="techStack.iconSrc"
                        :line="i + 1"
                        :tech="techStack.tech"
@@ -140,7 +140,7 @@ export default class Home extends Vue {
 }
 
 .profile-xs {
-  height: 36%;
+  height: 40%;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -155,12 +155,11 @@ export default class Home extends Vue {
 }
 
 .tech-stack-xs {
-  margin-top: 1%;
-  height: 60%;
+  margin-top: 5%;
+  height: 65%;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .name {
@@ -171,8 +170,8 @@ export default class Home extends Vue {
 
 .tech-stack-list {
   width: 100%;
-  height: 90%;
-  padding-left: 6%;
+  height: 85%;
+  padding-left: 3%;
   border: 1px solid white;
   background-color: #332F2E;
   display: flex;
