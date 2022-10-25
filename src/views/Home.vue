@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
-import TechStack from "@/components/mobile/TechStack.vue";
+import TechStack from "@/components/common/TechStack.vue";
 import Profile from "@/components/profile/profile.vue";
 import {TechStack as TechStackType} from "../Types";
 

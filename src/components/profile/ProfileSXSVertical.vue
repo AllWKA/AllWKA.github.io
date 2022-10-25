@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
-import SocialLink from "@/components/mobile/SocialLink.vue";
+import SocialLink from "@/components/common/SocialLink.vue";
 
 @Component({
   components: {SocialLink}
