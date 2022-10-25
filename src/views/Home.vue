@@ -1,32 +1,6 @@
 <template>
   <div class="home-container">
-    <ProfileSXSHorizontal/>
-    <!--    <div class="profile profile-xs-s">-->
-    <!--      <div class="profile-container">-->
-    <!--        <div class="img-profile-container-xs-s-horizontal">-->
-    <!--          <img src="@/assets/punpun.png" alt="profile_picture" class="img" style="transform: scaleX(-1)">-->
-    <!--        </div>-->
-
-    <!--        <h1 class="name">Bryan <br> Jaramillo <br> Baldeón</h1>-->
-    <!--      </div>-->
-
-    <!--      <div class="social-link-section">-->
-    <!--        <SocialLink iconSrc="linkedin.svg"-->
-    <!--                    alt="linkedin_icon"-->
-    <!--                    href="https://www.linkedin.com/in/bryan-jaramillo-baldeón/"-->
-    <!--                    href-text="/in/bryan-jaramillo-baldeón"/>-->
-
-    <!--        <SocialLink iconSrc="github.svg"-->
-    <!--                    alt="github_icon"-->
-    <!--                    href="https://github.com/AllWKA"-->
-    <!--                    href-text="/AllWKA"/>-->
-
-    <!--        <SocialLink iconSrc="twitter.svg"-->
-    <!--                    alt="twitter_icon"-->
-    <!--                    href="https://twitter.com/bryanjaramillob"-->
-    <!--                    href-text="/bryanjaramillob"/>-->
-    <!--      </div>-->
-    <!--    </div>-->
+    <Profile/>
 
     <div class="tech-stack-xs-s">
       <div class="file-container">
@@ -66,14 +40,13 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue, Watch} from "vue-property-decorator";
-import SocialLink from "@/components/mobile/SocialLink.vue";
+import {Component, Vue} from "vue-property-decorator";
 import TechStack from "@/components/mobile/TechStack.vue";
-import ProfileSXSHorizontal from "@/components/profile/ProfileSXSHorizontal.vue";
+import Profile from "@/components/profile/profile.vue";
 import {TechStack as TechStackType} from "../Types";
 
 @Component({
-  components: {TechStack, SocialLink, ProfileSXSHorizontal}
+  components: {TechStack, Profile}
 })
 export default class Home extends Vue {
 
@@ -97,36 +70,10 @@ export default class Home extends Vue {
     {iconSrc: "docker.png", alt: "docker_icon", tech: "Docker"}
   ]
 
-  windowHeight = 0
-
-  windowWidth = 0
-
   activeTab = 0
-
-  windowSizeClass = ''
 
   setActiveTab(tab: number): void {
     this.activeTab = tab
-  }
-
-  onResize() {
-    this.windowHeight = window.innerHeight
-
-    this.windowWidth = window.innerWidth
-  }
-
-  @Watch('windowHeight')
-  onWindowResolutionChanged() {
-    if (this.windowHeight <= 560 && this.windowHeight >= 360) {
-      this.windowSizeClass = 'xs-s-horizontal'
-      console.log('xs-s-horizontal')
-    } else {
-
-    }
-  }
-
-  mounted() {
-    window.addEventListener('resize', this.onResize);
   }
 }
 </script>
@@ -143,58 +90,12 @@ export default class Home extends Vue {
   background-color: #191919;
 }
 
-.profile-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.social-link-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3%;
-}
-
-.img-profile-container-xs-s {
-  height: 100%;
-  width: 33%;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 2.5%;
-  display: flex;
-}
-
-.profile {
-  color: #E0D1CA;
-  background-color: #332F2E;
-  border: 1px solid black;
-  box-shadow: 10px 10px 18px 0 rgb(0, 0, 0);
-  background-image: url("../../public/assets/black-paper.png");
-  background-repeat: repeat;
-}
-
-.profile-xs-s {
-  height: 40%;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  margin: 3% 2% 1%;
-}
-
 .tech-stack-xs-s {
   margin-top: 5%;
   height: 65%;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-.name {
-  margin-top: 5%;
-  font-size: 1.6rem;
-  width: 50%;
 }
 
 .tech-stack-list {
