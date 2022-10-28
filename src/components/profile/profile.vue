@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue, Watch} from "vue-property-decorator";
+import {Component, Prop, Vue, Watch} from "vue-property-decorator";
 import ProfileSXSHorizontal from "@/components/profile/ProfileSXSHorizontal.vue";
 import ProfileSXSVertical from "@/components/profile/ProfileSXSVertical.vue";
 
@@ -16,17 +16,13 @@ import ProfileSXSVertical from "@/components/profile/ProfileSXSVertical.vue";
   components: {ProfileSXSHorizontal, ProfileSXSVertical}
 })
 export default class Profile extends Vue {
-  windowHeight = 0
+  @Prop({default: 0})
+  windowHeight
 
-  windowWidth = 0
+  @Prop({default: 0})
+  windowWidth
 
   renderedComponent = 'ProfileSXSHorizontal'
-
-  onResize(): void {
-    this.windowHeight = window.innerHeight
-
-    this.windowWidth = window.innerWidth
-  }
 
   @Watch('windowHeight')
   onWindowResolutionChanged(): void {
@@ -35,10 +31,6 @@ export default class Profile extends Vue {
     } else {
       this.renderedComponent = 'ProfileSXSVertical'
     }
-  }
-
-  mounted(): void {
-    window.addEventListener('resize', this.onResize);
   }
 }
 </script>

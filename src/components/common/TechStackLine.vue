@@ -16,7 +16,7 @@
 import {Component, Prop, Vue} from "vue-property-decorator";
 
 @Component
-export default class TechStack extends Vue {
+export default class TechStackLine extends Vue {
   @Prop({default: ''})
   iconSrc!: string
 
