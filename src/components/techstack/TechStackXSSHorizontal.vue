@@ -33,6 +33,7 @@
   </div>
 </template>
 
+
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
 import TechStackLine from "@/components/common/TechStackLine.vue";
@@ -58,7 +59,7 @@ export default class TechStackXSSVertical extends Vue {
 
 <style scoped>
 .file-container {
-  margin-top: 5%;
+  margin-top: 2%;
   width: 90%;
   height: 85%;
   display: flex;
@@ -81,7 +82,6 @@ export default class TechStackXSSVertical extends Vue {
 
 .file-labels-container {
   display: flex;
-  height: 8%;
   width: 100%;
 }
 

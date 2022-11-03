@@ -40,7 +40,8 @@ export default class Profile extends Vue {
 .profile {
   width: 90%;
   height: 40%;
-  margin: 3% 2% 1%;
+  margin: 3% 4% 1% 0;
+  display: flex;
   color: #E0D1CA;
   background-color: #332F2E;
   border: 1px solid black;
