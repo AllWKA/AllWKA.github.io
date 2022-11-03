@@ -3,6 +3,7 @@
   <div class="profile">
     <ProfileSXSHorizontal v-if="renderedComponent === 'ProfileSXSHorizontal'"/>
     <ProfileSXSVertical v-else-if="renderedComponent === 'ProfileSXSVertical'"/>
+<!--    <ProfileXMHorizontal/>-->
   </div>
 
 </template>
@@ -11,9 +12,10 @@
 import {Component, Prop, Vue, Watch} from "vue-property-decorator";
 import ProfileSXSHorizontal from "@/components/profile/ProfileSXSHorizontal.vue";
 import ProfileSXSVertical from "@/components/profile/ProfileSXSVertical.vue";
+import ProfileXMHorizontal from "@/components/profile/ProfileXMHorizontal.vue";
 
 @Component({
-  components: {ProfileSXSHorizontal, ProfileSXSVertical}
+  components: {ProfileSXSHorizontal, ProfileSXSVertical, ProfileXMHorizontal}
 })
 export default class Profile extends Vue {
   @Prop({default: 0})

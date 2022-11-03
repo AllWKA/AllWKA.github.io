@@ -33,15 +33,15 @@ export default class TechStack extends Vue {
   techStackList: Array<TechStackType> = [
     {iconSrc: "JavaScript.svg", alt: "javascript_icon", tech: "JavaScript", time: "3 years"},
     {iconSrc: "Typescript.svg", alt: "typescript_icon", tech: "TypeScript", time: "3 years"},
-    {iconSrc: "HTML5_2.png", alt: "html5_icon", tech: "HTML5", time: "3 years"},
-    {iconSrc: "CSS3.png", alt: "css3_icon", tech: "CSS3", time: "3 years"},
+    {iconSrc: "HTML5.svg", alt: "html5_icon", tech: "HTML5", time: "3 years"},
+    {iconSrc: "CSS3.svg", alt: "css3_icon", tech: "CSS3", time: "3 years"},
+    {iconSrc: "Mocha.png", alt: "mocha_icon", tech: "Mocha", time: "1 year"},
     {iconSrc: "NodeJS.svg", alt: "nodejs_icon", tech: "NodeJs", time: "3 years"},
     {iconSrc: "VueJS.svg", alt: "vuejs_icon", tech: "VueJs", time: "3 years"}
   ]
 
   workedWithList: Array<TechStackType> = [
     {iconSrc: "ElectronJS.svg", alt: "electronjs_icon", tech: "ElectronJS"},
-    {iconSrc: "Mocha.png", alt: "mocha_icon", tech: "Mocha"},
     {iconSrc: "Ionic.svg", alt: "ionic_icon", tech: "Ionic"},
     {iconSrc: "quarkus.svg", alt: "quarkus_icon", tech: "Quarkus"},
     {iconSrc: "java.png", alt: "java_icon", tech: "Java"},

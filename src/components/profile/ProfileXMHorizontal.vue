@@ -8,7 +8,7 @@
       <h1 class="name name-xm-horizontal">Bryan Jaramillo Baldeón</h1>
     </div>
 
-    <div style="width: 55%">
+    <div style="height: 60%; width: 40%; display: flex; flex-direction: column; justify-content: space-around">
       <SocialLink iconSrc="linkedin.svg"
                   alt="linkedin_icon"
                   href="https://www.linkedin.com/in/bryan-jaramillo-baldeón/"
@@ -34,22 +34,30 @@ import SocialLink from "@/components/common/SocialLink.vue";
 @Component({
   components: {SocialLink}
 })
-export default class ProfileSXSHorizontal extends Vue {
+export default class ProfileXMHorizontal extends Vue {
 }
 </script>
 
 <style scoped>
+.profile-xm-horizontal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .name-xm-horizontal {
-  width: 70%;
-  font-size: 1.3rem;
-  padding-left: 4%;
-  margin: 1%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-right: 3%;
 }
 
 .profile-container-xm-horizontal {
   height: 100%;
-  width: 45%;
+  width: 60%;
   padding-top: 2%;
   padding-left: 2%;
   padding-bottom: 2%;
@@ -63,13 +71,4 @@ export default class ProfileSXSHorizontal extends Vue {
   width: 30%;
   height: 100%;
 }
-
-.profile-xm-horizontal {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 </style>
