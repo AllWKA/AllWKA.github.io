@@ -4,11 +4,13 @@
 
     <span class="tech-stack-const">const</span>
 
+    <span style="margin-right: 2%">{{ tech }} = </span>
+
     <div class="tech-stack-img-container">
       <img :src="require(`@/assets/icons/${iconSrc}`)" alt="javascript_logo" class="img">
     </div>
 
-    <span class="tech-stack-desc"> = "{{ tech }}<span v-if="time">: {{ time }}</span>"</span>
+    <span class="tech-stack-desc" v-if="time">"{{ time }}"</span>
   </div>
 </template>
 
@@ -65,7 +67,6 @@ export default class TechStackLine extends Vue {
 }
 
 .tech-stack-desc {
-  width: 250px;
   color: #42b242;
 }
 </style>
