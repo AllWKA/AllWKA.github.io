@@ -10,9 +10,10 @@
         :techStackList="techStackList"
         :workedWithList="workedWithList"/>
 
-    <!--    <TechStackXMHorizontal-->
-    <!--        :techStackList="techStackList"-->
-    <!--        :workedWithList="workedWithList"/>-->
+    <TechStackXMHorizontal
+        v-else-if="renderedComponent === 'TechStackXMHorizontal'"
+        :techStackList="techStackList"
+        :workedWithList="workedWithList"/>
   </div>
 </template>
 
@@ -65,8 +66,11 @@ export default class TechStack extends Vue {
   onWindowResolutionChanged(): void {
     if (this.windowHeight <= 560 && this.windowHeight >= 360) {
       this.renderedComponent = 'TechStackXSSHorizontal'
-    } else {
+    } else if (this.windowHeight <= 667 && this.windowHeight >= 561) {
       this.renderedComponent = 'TechStackXSSVertical'
+    } else if (this.windowHeight <= 768 && this.windowHeight >= 667) {
+      console.log("hi")
+      this.renderedComponent = 'TechStackXMHorizontal'
     }
   }
 }

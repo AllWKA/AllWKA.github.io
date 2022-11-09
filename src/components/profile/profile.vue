@@ -3,7 +3,7 @@
   <div class="profile">
     <ProfileSXSHorizontal v-if="renderedComponent === 'ProfileSXSHorizontal'"/>
     <ProfileSXSVertical v-else-if="renderedComponent === 'ProfileSXSVertical'"/>
-<!--    <ProfileXMHorizontal/>-->
+    <ProfileXMHorizontal v-else-if="renderedComponent === 'ProfileXMHorizontal'"/>
   </div>
 
 </template>
@@ -30,8 +30,10 @@ export default class Profile extends Vue {
   onWindowResolutionChanged(): void {
     if (this.windowHeight <= 560 && this.windowHeight >= 360) {
       this.renderedComponent = 'ProfileSXSHorizontal'
-    } else {
+    } else if(this.windowHeight <= 667 && this.windowHeight >= 560){
       this.renderedComponent = 'ProfileSXSVertical'
+    } if(this.windowHeight <= 768 && this.windowHeight >= 667) {
+      this.renderedComponent = 'ProfileXMHorizontal'
     }
   }
 }
