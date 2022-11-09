@@ -9,6 +9,10 @@
         v-else-if="renderedComponent === 'TechStackXSSHorizontal'"
         :techStackList="techStackList"
         :workedWithList="workedWithList"/>
+
+    <!--    <TechStackXMHorizontal-->
+    <!--        :techStackList="techStackList"-->
+    <!--        :workedWithList="workedWithList"/>-->
   </div>
 </template>
 
@@ -17,16 +21,17 @@ import {Component, Prop, Vue, Watch} from "vue-property-decorator";
 import {TechStack as TechStackType} from "@/Types";
 import TechStackXSSVertical from "@/components/techstack/TeckStackXSSVertical.vue";
 import TechStackXSSHorizontal from "@/components/techstack/TechStackXSSHorizontal.vue";
+import TechStackXMHorizontal from "@/components/techstack/TechStackXMHorizontal.vue";
 
 @Component({
-  components: {TechStackXSSVertical, TechStackXSSHorizontal}
+  components: {TechStackXSSVertical, TechStackXSSHorizontal, TechStackXMHorizontal}
 })
 export default class TechStack extends Vue {
   @Prop({default: 0})
-  windowHeight
+  windowHeight = 0
 
   @Prop({default: 0})
-  windowWidth
+  windowWidth = 0
 
   renderedComponent = 'TechStackXSSVertical'
 

@@ -19,10 +19,10 @@ import ProfileXMHorizontal from "@/components/profile/ProfileXMHorizontal.vue";
 })
 export default class Profile extends Vue {
   @Prop({default: 0})
-  windowHeight
+  windowHeight = 0
 
   @Prop({default: 0})
-  windowWidth
+  windowWidth = 0
 
   renderedComponent = 'ProfileSXSHorizontal'
 

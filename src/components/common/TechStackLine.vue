@@ -61,7 +61,7 @@ export default class TechStackLine extends Vue {
 }
 
 .tech-stack-const {
-  margin-right: 3%;
+  margin-right: 1%;
   width: 49px;
   color: orange;
 }
