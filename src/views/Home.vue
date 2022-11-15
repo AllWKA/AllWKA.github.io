@@ -26,6 +26,9 @@ export default class Home extends Vue {
 
   mounted(): void {
     window.addEventListener('resize', this.onResize);
+
+    this.windowWidth = window.innerWidth
+    this.windowHeight = window.innerHeight
   }
 }
 </script>
