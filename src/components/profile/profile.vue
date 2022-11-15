@@ -32,7 +32,7 @@ export default class Profile extends Vue {
       this.renderedComponent = 'ProfileSXSHorizontal'
     } else if(this.windowHeight <= 667 && this.windowHeight >= 560){
       this.renderedComponent = 'ProfileSXSVertical'
-    } if(this.windowHeight <= 768 && this.windowHeight >= 667) {
+    } else if(this.windowHeight <= 768 && this.windowHeight >= 667) {
       this.renderedComponent = 'ProfileXMHorizontal'
     }
   }

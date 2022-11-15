@@ -1,11 +1,11 @@
 <template>
-  <div class="profile-xm-horizontal">
-    <div class="profile-container-xm-horizontal">
-      <div class="img-profile-container-xm-horizontal">
+  <div class="profile-xs-s-horizontal">
+    <div class="profile-container-xs-s-horizontal">
+      <div class="img-profile-container-xs-s-horizontal">
         <img src="@/assets/punpun.png" alt="profile_picture" class="img" style="transform: scaleX(-1)">
       </div>
 
-      <h1 class="name name-xm-horizontal">Bryan Jaramillo Baldeón</h1>
+      <h1 class="name name-xs-s-horizontal">Bryan Jaramillo Baldeón</h1>
     </div>
 
     <div style="width: 55%">
@@ -40,14 +40,14 @@ export default class ProfileSXSHorizontal extends Vue {
 
 <style scoped>
 
-.name-xm-horizontal {
+.name-xs-s-horizontal {
   width: 70%;
   font-size: 1.3rem;
   padding-left: 4%;
   margin: 1%;
 }
 
-.profile-container-xm-horizontal {
+.profile-container-xs-s-horizontal {
   height: 100%;
   width: 45%;
   padding-top: 2%;
@@ -58,13 +58,13 @@ export default class ProfileSXSHorizontal extends Vue {
   align-items: center;
 }
 
-.img-profile-container-xm-horizontal {
+.img-profile-container-xs-s-horizontal {
   display: flex;
   width: 30%;
   height: 100%;
 }
 
-.profile-xm-horizontal {
+.profile-xs-s-horizontal {
   width: 100%;
   height: 100%;
   display: flex;
