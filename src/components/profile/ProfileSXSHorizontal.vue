@@ -8,31 +8,16 @@
       <h1 class="name name-xs-s-horizontal">Bryan Jaramillo Baldeón</h1>
     </div>
 
-    <div style="width: 55%">
-      <SocialLink iconSrc="linkedin.svg"
-                  alt="linkedin_icon"
-                  href="https://www.linkedin.com/in/bryan-jaramillo-baldeón/"
-                  href-text="/in/bryan-jaramillo-baldeón"/>
-
-      <SocialLink iconSrc="github.svg"
-                  alt="github_icon"
-                  href="https://github.com/AllWKA"
-                  href-text="/AllWKA"/>
-
-      <SocialLink iconSrc="twitter.svg"
-                  alt="twitter_icon"
-                  href="https://twitter.com/bryanjaramillob"
-                  href-text="/bryanjaramillob"/>
-    </div>
+    <SocialLinks/>
   </div>
 </template>
 
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
-import SocialLink from "@/components/common/SocialLink.vue";
+import SocialLinks from "@/components/profile/SocialLinks.vue";
 
 @Component({
-  components: {SocialLink}
+  components: {SocialLinks}
 })
 export default class ProfileSXSHorizontal extends Vue {
 }

@@ -8,31 +8,16 @@
       <h1 class="name">Bryan <br> Jaramillo <br> Baldeón</h1>
     </div>
 
-    <div class="social-link-section">
-      <SocialLink iconSrc="linkedin.svg"
-                  alt="linkedin_icon"
-                  href="https://www.linkedin.com/in/bryan-jaramillo-baldeón/"
-                  href-text="/in/bryan-jaramillo-baldeón"/>
-
-      <SocialLink iconSrc="github.svg"
-                  alt="github_icon"
-                  href="https://github.com/AllWKA"
-                  href-text="/AllWKA"/>
-
-      <SocialLink iconSrc="twitter.svg"
-                  alt="twitter_icon"
-                  href="https://twitter.com/bryanjaramillob"
-                  href-text="/bryanjaramillob"/>
-    </div>
+    <SocialLinks/>
   </div>
 </template>
 
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
-import SocialLink from "@/components/common/SocialLink.vue";
+import SocialLinks from "@/components/profile/SocialLinks.vue";
 
 @Component({
-  components: {SocialLink}
+  components: {SocialLinks}
 })
 export default class ProfileSXSVertical extends Vue {
 
@@ -46,12 +31,6 @@ export default class ProfileSXSVertical extends Vue {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.social-link-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3%;
 }
 
 .img-profile-container-xs-s {
