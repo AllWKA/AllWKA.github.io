@@ -84,20 +84,4 @@ export default class TechStackXSSVertical extends Vue {
   display: flex;
   width: 100%;
 }
-
-.tech-stack-label-active {
-  border: 1px solid white;
-  background-color: #332F2E;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px 5px 0 0;
-}
-
-.tech-stack-label-idle {
-  border: 1px solid #867a7a;
-  background-color: #151313;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 5px 5px 0 0;
-}
 </style>
