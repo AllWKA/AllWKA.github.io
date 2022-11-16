@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import TechStackLine from "@/components/common/TechStackLine.vue";
+import TechStackLine from "@/components/techstack/TechStackLine.vue";
 import {TechStack as TechStackType} from "@/Types";
 
 @Component({
