@@ -35,6 +35,8 @@ export default class SocialLinks extends Vue {
   display: flex;
   flex-direction: column;
   margin-top: 3%;
+  justify-content: space-around;
+  height: 65%;
 }
 
 </style>
