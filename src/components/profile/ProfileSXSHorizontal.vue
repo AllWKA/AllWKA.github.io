@@ -55,6 +55,7 @@ export default class ProfileSXSHorizontal extends Vue {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3%;
 }
 
 </style>

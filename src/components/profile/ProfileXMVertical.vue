@@ -1,14 +1,14 @@
 <template>
-  <div class="profile-xm-horizontal">
-    <div class="profile-container-xm-horizontal">
-      <div class="img-profile-container-xm-horizontal">
+  <div class="profile-xm-vertical">
+    <div class="profile-container-xm-vertical">
+      <div class="img-profile-container-xm-vertical">
         <img src="@/assets/punpun.png" alt="profile_picture" class="img" style="transform: scaleX(-1)">
       </div>
 
-      <h1 class="name name-xm-horizontal">Bryan Jaramillo Baldeón</h1>
+      <h1 class="name name-xm-vertical">Bryan Jaramillo Baldeón</h1>
     </div>
 
-    <SocialLinks/>
+    <SocialLinks orientation="row"/>
   </div>
 </template>
 
@@ -19,40 +19,34 @@ import SocialLinks from "@/components/profile/SocialLinks.vue";
 @Component({
   components: {SocialLinks}
 })
-export default class ProfileXMHorizontal extends Vue {
+export default class ProfileXMVertical extends Vue {
 }
 </script>
 
 <style scoped>
-.profile-xm-horizontal {
-  width: 100%;
-  height: 100%;
+.profile-xm-vertical {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 3%;
 }
 
-.name-xm-horizontal {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.name-xm-vertical {
   font-size: 1.8rem;
   margin-right: 3%;
 }
 
-.profile-container-xm-horizontal {
-  height: 100%;
-  width: 60%;
+.profile-container-xm-vertical {
+  height: 60%;
+  width: 100%;
   padding-top: 2%;
   padding-left: 2%;
   padding-bottom: 2%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 
-.img-profile-container-xm-horizontal {
+.img-profile-container-xm-vertical {
   display: flex;
   width: 30%;
   height: 100%;

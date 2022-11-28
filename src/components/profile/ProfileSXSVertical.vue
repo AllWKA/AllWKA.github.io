@@ -48,6 +48,7 @@ export default class ProfileSXSVertical extends Vue {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
+  margin-bottom: 5%;
 }
 
 .name {

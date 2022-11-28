@@ -4,6 +4,7 @@
     <ProfileSXSHorizontal v-if="renderedComponent === 'ProfileSXSHorizontal'"/>
     <ProfileSXSVertical v-else-if="renderedComponent === 'ProfileSXSVertical'"/>
     <ProfileXMHorizontal v-else-if="renderedComponent === 'ProfileXMHorizontal'"/>
+    <ProfileXMVertical v-else-if="renderedComponent === 'ProfileXMVertical'"/>
   </div>
 
 </template>
@@ -13,9 +14,10 @@ import {Component, Prop, Vue, Watch} from "vue-property-decorator";
 import ProfileSXSHorizontal from "@/components/profile/ProfileSXSHorizontal.vue";
 import ProfileSXSVertical from "@/components/profile/ProfileSXSVertical.vue";
 import ProfileXMHorizontal from "@/components/profile/ProfileXMHorizontal.vue";
+import ProfileXMVertical from "@/components/profile/ProfileXMVertical.vue";
 
 @Component({
-  components: {ProfileSXSHorizontal, ProfileSXSVertical, ProfileXMHorizontal}
+  components: {ProfileSXSHorizontal, ProfileSXSVertical, ProfileXMHorizontal, ProfileXMVertical}
 })
 export default class Profile extends Vue {
   @Prop({default: 0})
@@ -30,10 +32,12 @@ export default class Profile extends Vue {
   onWindowResolutionChanged(): void {
     if (this.windowHeight <= 560 && this.windowHeight >= 360) {
       this.renderedComponent = 'ProfileSXSHorizontal'
-    } else if(this.windowHeight <= 667 && this.windowHeight >= 560){
+    } else if (this.windowHeight <= 667 && this.windowHeight >= 561) {
       this.renderedComponent = 'ProfileSXSVertical'
-    } else if(this.windowHeight <= 768 && this.windowHeight >= 667) {
+    } else if (this.windowHeight <= 767 && this.windowHeight >= 668) {
       this.renderedComponent = 'ProfileXMHorizontal'
+    } else if (this.windowWidth >= 768 && this.windowHeight >= 896) {
+      this.renderedComponent = 'ProfileXMVertical'
     }
   }
 }
@@ -43,7 +47,7 @@ export default class Profile extends Vue {
 
 .profile {
   width: 90%;
-  height: 40%;
+  /*height: 40%;*/
   margin: 3% 4% 1% 0;
   display: flex;
   color: #E0D1CA;
