@@ -1,47 +1,18 @@
 <template>
-  <div class="home-container">
-    <Profile :window-height="windowHeight" :window-width="windowWidth"/>
-    <TechStack :window-height="windowHeight" :window-width="windowWidth"/>
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
-<script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import Profile from "@/components/profile/profile.vue";
-import TechStack from "@/components/techstack/TeckStack.vue";
+<script>
+// @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
 
-@Component({
-  components: {TechStack, Profile}
-})
-export default class Home extends Vue {
-  windowHeight = 0
-
-  windowWidth = 0
-
-  onResize(): void {
-    this.windowHeight = window.innerHeight
-
-    this.windowWidth = window.innerWidth
+export default {
+  name: "Home",
+  components: {
+    HelloWorld
   }
-
-  mounted(): void {
-    window.addEventListener('resize', this.onResize);
-
-    this.windowWidth = window.innerWidth
-    this.windowHeight = window.innerHeight
-  }
-}
+};
 </script>
-
-<style scoped>
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: #191919;
-}
-</style>
