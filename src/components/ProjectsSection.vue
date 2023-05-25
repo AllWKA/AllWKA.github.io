@@ -35,7 +35,7 @@
             </a>
           </div>
 
-          <a href="https://github.com/AllWKA/SkullKingCounter">Link</a>
+          <a href="https://play.google.com/store/apps/details?id=github.com.AllWKA&hl=es&gl=US">Puedes descargarlo en Google Play pinchando aquí.</a>
 
           <div class="tech-container">
             <img class="tech-icon" src="../assets/icons/Ionic.svg" alt="ionic-icon">
@@ -67,7 +67,10 @@
             del dinero de la cuenta para simular cuentas de ahorro.
           </p>
 
-          <a href="https://github.com/AllWKA/SkullKingCounter">Link</a>
+          <a href="https://github.com/AllWKA/we3znhawallet">
+            <img class="contact-icon" src="../assets/icons/github.svg" alt="github-icon">
+            Link
+          </a>
 
           <div class="tech-container">
             <img class="tech-icon" src="../assets/icons/ElectronJS.svg" alt="electron-icon">
@@ -95,7 +98,10 @@
             para crear parties para ver videos juntos.
           </p>
 
-          <a href="https://github.com/AllWKA/BideoPureya">Link</a>
+          <a href="https://github.com/AllWKA/BideoPureya">
+            <img class="contact-icon" src="../assets/icons/github.svg" alt="github-icon">
+            Link
+          </a>
 
           <div class="tech-container">
             <img class="tech-icon" src="../assets/icons/ElectronJS.svg" alt="electron-icon">
@@ -125,7 +131,10 @@
             recolectar y vender para poder ganar la mayor cantidad de dinero en 10 días.
           </p>
 
-          <a href="https://allwka.itch.io/tagoror-farming">Link</a>
+          <a href="https://allwka.itch.io/tagoror-farming">
+            <img class="contact-icon" src="../assets/icons/itchio-textless-black.svg" alt="github-icon">
+            Link
+          </a>
 
           <div class="tech-container">
             <img class="tech-icon" src="../assets/icons/ElectronJS.svg" alt="electron-icon">

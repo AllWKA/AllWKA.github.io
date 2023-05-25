@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; width: 100%; justify-content: flex-start; align-items: center; flex-direction: column">
+  <div class="privacy-policy-container">
     <h1>Privacy Policy for Skull King Counter</h1>
     <p>I do not collect any data from you, but google play needs this page anyway, so just enjoy the game</p>
   </div>
@@ -12,5 +12,11 @@ export default {
 </script>
 
 <style scoped>
-
+.privacy-policy-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
 </style>
